@@ -1,41 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- background -->
-    <body background="assets/images/dark_bg.jpg" > 
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    #map {
+        height: 500px;
+        width: 100%;
+    }
+</style>
 </head>
 <body>
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            var location = {lat: 28.538335, lng: -81.379236};
+            var map = new google.maps.Map(document.getElementById("map"), {
+               zoom: 4,
+               center: location 
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
     
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApLeLjAqhg5nXoDlvzxKzmdv78-Qqh3F8&callback=initMap"></script>>
 
-     <!-- Google map -->
-     <div class="row">
-        <div class="col-sm-6 mapHolder">
-            <br>
-            <div id="map" style="width:100%;height:400px;"></div>
-            <br>
-            <br>
-            <form>
-                <div class="form-row">
-                    <div class="col"></div>
-                </div>
-            </form>
-        </div>
-        <div class="col-sm-6 aboutContainer">
-            <h2>
-                <u></u>
-            </h2>
-
-
-            </b>
-        </div>
- 
-    </div>
-
-
-
+    <!-- background -->
+    <body background="assets/images/dark_bg.jpg" >  
+  
 </body>
 </html>
