@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <!-- <link rel="sylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"> -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="assets/css/bootswatch.css">
+        <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+     <!-- google fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
     <title>Document</title>
+
+              <!-- navbar -->
+  <div class="topnav">
+        <a href="login.html">login</a>
+        <a href="home.html">home</a>
+        <a href="activity.html">activity</a>
+        <a href="map.html">map</a>
+      </div>
+
 <style>
     * {
         margin: 0;
@@ -14,6 +32,9 @@
 </style>
 </head>
 <body>
+        <h1>Find-A-Park</h1>
+
+        <!-- google map -->
     <div id="map"></div>
 
     <script>
@@ -32,8 +53,27 @@
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApLeLjAqhg5nXoDlvzxKzmdv78-Qqh3F8&callback=initMap"></script>>
 
+<!-- google place -->
+<div id="place"></div>
+
+<script>
+    function initPlace() {
+        var location = {lat: 28.538335, lng: -81.379236};
+        var place = new google.place.Place(document.getElementById("place"), {
+           zoom: 4,
+           center: location 
+        });
+        var marker = new google.place.Marker({
+            position: location,
+            place: place
+        });
+    }
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=cruise&key=AIzaSyAVtTHOdLoDiGeWe_JYSUNg1RtGlwITJJM"></script>>
     <!-- background -->
-    <body background="assets/images/dark_bg.jpg" >  
+    <body background="assets/images/dark_bg.jpg">
   
+
 </body>
 </html>
