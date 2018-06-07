@@ -7,6 +7,18 @@
     <title>login</title>
     <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
 
+      <!-- CSS -->
+<link rel="stylesheet" href="assets/css/style.css" />
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
+
+<!-- navbar -->
+    <div class="topnav">
+            <a href="login.html">login</a>
+            <a href="home.html">home</a>
+            <a href="activity.html">activity</a>
+            <a href="map.html">map</a>
+          </div>
     <style>
 
             @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
@@ -21,7 +33,7 @@
         bottom: -40px;
         width: auto;
         height: auto;
-        background-image: url(http://besttours.com/media/catalog/category/NYC_2-compressor.jpg);
+        background-image: url(http://www.guoguiyan.com/data/out/90/68415491-green-park-wallpapers.jpgg);
         background-size: cover;
         -webkit-filter: blur(0px);
     }
@@ -112,17 +124,19 @@
 
 </head>
 <body oncontextmenu="return false">
-<!-- 
-        <body background="assets/images/bench.JPG" >   -->
+
+        <body background="assets/images/bench.JPG">
         
             <div class="body"></div>
                 <div class="grad"></div>
                 <div class="header">
-                    <div>Find-A-Park<span>Sign In</span> </div>
+                    <div>Find-A-Park<span><br>Sign In</span> </div>
                 <br>
                 <form name="login">
                 <div class="login">
+                    <label for="uname"><b>Username</b></label>
                     <input type="text" placeholder="username" name="userid">
+                    <label for="psw"><b>Password</b></label>
                     <input type="password" placeholder="password" name="pswrd"><br>
                     <input type="button" onclick="check(this.form)"value="Login"/>
                 </div>
@@ -132,9 +146,9 @@
                 <script language="javascript">
                 function check(form)
                     {
-                        if(form.userid.value == "cmathachgo" && form.pswrd.value == "123")
+                        if(form.userid.value == "park" && form.pswrd.value == "123")
                             {
-                                window.open('href="home.html">home')
+                                window.location.assign("home.html")
                             }
                         else
                         {
@@ -146,3 +160,5 @@
 
 </body>
 </html>
+
+<!--  -->
