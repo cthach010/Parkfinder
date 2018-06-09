@@ -40,3 +40,22 @@ h4 {
     background-color: #4CAF50;
     color: white;
 }
+
+/* registering */
+div.form-group {
+    position: relative;
+  }
+  label {
+    display: block;
+  }
+  input {
+    display: block;
+  }
+  div.alert{
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+  }
+  p.help-block{
+    padding: 2px;
+  }
